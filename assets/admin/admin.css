@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Image HotSpots — Admin Placement Helper Styles
+   ========================================================================== */
+
+/* Push the placement helper message field to full width */
+.acf-field[data-name="ih_placement_helper"] {
+	display: block !important;
+}
+.acf-field[data-name="ih_placement_helper"] > .acf-label {
+	display: none; /* the label is redundant — the message itself explains it */
+}
+.acf-field[data-name="ih_placement_helper"] > .acf-input {
+	width: 100% !important;
+	padding: 0 !important;
+}
+
+/* Preview wrapper */
+#ih-preview-wrap {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	cursor: crosshair;
+	border: 2px dashed #c3c4c7;
+	border-radius: 6px;
+	overflow: hidden;
+	background: #f0f0f1;
+	box-sizing: border-box;
+	/* Prevent text-selection while dragging */
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+#ih-preview-wrap img {
+	display: block;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+}
+
+/* Empty-state message shown before an image is chosen */
+#ih-preview-empty {
+	padding: 40px 20px;
+	text-align: center;
+	color: #8c8f94;
+	font-size: 13px;
+}
+
+/* ── Markers ─────────────────────────────────────────────────────────────── */
+.ih-admin-marker {
+	position: absolute;
+	transform: translate(-50%, -100%);
+	line-height: 1;
+	pointer-events: auto;
+	cursor: grab;
+	z-index: 20;
+	/* Smooth visual repositioning while dragging */
+	transition: filter 0.1s;
+}
+
+.ih-admin-marker:hover {
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.ih-admin-marker.dragging {
+	cursor: grabbing !important;
+	filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));
+	z-index: 30;
+	transition: none;
+}
+
+/* The pin icon */
+.ih-admin-marker .ih-pin {
+	display: block;
+	font-size: 28px;
+	color: #e74c3c;
+	line-height: 1;
+}
+
+.ih-admin-marker.dragging .ih-pin {
+	color: #c0392b;
+}
+
+/* Numbered badge */
+.ih-admin-marker .ih-num {
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	color: #e74c3c;
+	font-size: 9px;
+	font-weight: 700;
+	font-family: -apple-system, sans-serif;
+	line-height: 1;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+/* ── Status bar ──────────────────────────────────────────────────────────── */
+#ih-status-bar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 8px;
+	min-height: 28px;
+}
+
+#ih-coord-hint {
+	display: inline-block;
+	padding: 4px 10px;
+	background: #2271b1;
+	color: #fff;
+	border-radius: 4px;
+	font-size: 12px;
+	font-family: monospace;
+}
+
+#ih-drag-hint {
+	font-size: 12px;
+	color: #646970;
+	font-style: italic;
+}
+
+/* ── Instructions text ───────────────────────────────────────────────────── */
+#ih-placement-helper .description {
+	max-width: none;
+	margin-bottom: 4px;
+}
