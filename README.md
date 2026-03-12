@@ -1,6 +1,6 @@
 # Image Hotspots
 
-Tags: jQuery, javascript
+Tags: jQuery, javascript, php, css
 Requires at least: 3.6.0
 Tested up to: 6.9.1
 License: GPL2
