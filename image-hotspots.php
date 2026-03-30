@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Image Hotspots
- * Plugin URI:  http://www.phildesigns.com
+ * Plugin URI:  https://www.phildesigns.com
  * Description: Add clickable hotspot markers to images using ACF Pro repeater fields with customisable tooltips and marker styles.
  * Version:     1.0.0
  * Author:      phil.designs | Phillip De Vita
- * Author URI:  http://www.phildesigns.com
+ * Author URI:  https://www.phildesigns.com
  * License:     GPL2
  * Text Domain: image-hotspots
  */
